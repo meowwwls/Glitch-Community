@@ -112,6 +112,7 @@ const CollectionPageContents = ({
             {collection.user && <UserTile user={collection.user} />}
 
             <div className="collection-description">
+      
               <AuthDescription
                 authorized={currentUserIsAuthor}
                 description={collection.description}
