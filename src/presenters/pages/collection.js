@@ -15,6 +15,7 @@ import NotFound from '../includes/not-found';
 
 import { AuthDescription } from '../includes/description-field';
 import CollectionEditor from '../collection-editor';
+import Image from '../../components/image/image';
 
 import EditCollectionColor from '../includes/edit-collection-color';
 import EditCollectionNameAndUrl from '../includes/edit-collection-name-and-url';
@@ -129,7 +130,7 @@ const CollectionPageContents = ({
           </header>
           {!collectionHasProjects && currentUserIsAuthor && (
             <div className="empty-collection-hint">
-              <img src="https://cdn.glitch.com/1afc1ac4-170b-48af-b596-78fe15838ad3%2Fpsst-pink.svg?1541086338934" alt="" />
+              <Image src="https://cdn.glitch.com/1afc1ac4-170b-48af-b596-78fe15838ad3%2Fpsst-pink.svg?1541086338934" alt="" />
               <Text>You can add any project, created by any user</Text>
             </div>
           )}
