@@ -10,6 +10,7 @@ import { DataLoader } from './includes/loader';
 
 import { useAPI } from '../state/api';
 import Heading from '../components/text/heading';
+import Image from '../components/image/image';
 
 const MoreIdeasCollectionsDisplay = ({ collections }) => (
   <section className="more-ideas">
@@ -57,7 +58,7 @@ export const MoreIdeasCategories = () => (
       {categories.map((category) => (
         <li key={category.id}>
           <Link className="more-ideas-box" to={category.url} style={{ backgroundColor: category.color }}>
-            <img src={category.avatarUrl} alt="" />
+            <Image src={category.avatarUrl} alt="" />
             <div>{category.name}</div>
           </Link>
         </li>

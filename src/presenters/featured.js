@@ -10,6 +10,7 @@ import { Link } from './includes/link';
 
 import FeaturedEmbed from './featured-embed';
 import { FeaturedCollections } from './featured-collections';
+import Image from '../components/image/image';
 
 const ZineItems = () => {
   const [posts] = React.useState(window.ZINE_POSTS.slice(0, 4));
@@ -43,7 +44,7 @@ const ZineItems = () => {
 const FeaturedPanel = ({ img, link, title }) => (
   <Link to={link} data-track="featured-project" data-track-label={title}>
     <div className="featured-container">
-      <img className="featured" src={img} alt="" />
+      <Image className="featured" src={img} alt="" />
       <p className="project-name">{title}</p>
     </div>
   </Link>

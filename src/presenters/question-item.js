@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { getEditorUrl } from '../models/project';
 import { Link } from './includes/link';
+import Image from '../components/image/image';
 
 const iconHelp = 'https://cdn.glitch.com/f7224274-1330-4022-a8f2-8ae09dbd68a8%2Fask-for-help.svg?1494954687906';
 
@@ -21,11 +22,11 @@ function truncateTag(tag) {
 
 const QuestionItem = ({ colorOuter, colorInner, domain, question, tags, userAvatar, userColor, userLogin, path, line, character }) => (
   <>
-    <img className="help-icon" src={iconHelp} alt="" />
+    <Image className="help-icon" src={iconHelp} alt="Help icon" />
     <Link to={getEditorUrl(domain, path, line, character)} data-track="question" data-track-label={domain}>
       <div className="project" style={{ backgroundColor: colorOuter }}>
         <div className="project-container" style={{ backgroundColor: colorInner }}>
-          <img className="avatar" src={userAvatar} style={{ backgroundColor: userColor }} alt="" />
+          <Image className="avatar" src={userAvatar} style={{ backgroundColor: userColor }} alt="" />
           <div className="button">Help {userLogin}</div>
           <div className="description question" title={question}>
             {truncateQuestion(question)}

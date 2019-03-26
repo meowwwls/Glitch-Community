@@ -10,6 +10,7 @@ import UsersList from './users-list';
 import WrappingLink from './includes/wrapping-link';
 import { VerifiedBadge } from './includes/team-elements';
 import Button from '../components/buttons/button';
+import Image from '../components/image/image';
 
 export default function TeamItem({ team }) {
   const style = getProfileStyle({ ...team, size: 'medium' });
@@ -19,7 +20,7 @@ export default function TeamItem({ team }) {
       <>
         <div className="cover" style={style} />
         <div className="content">
-          <img className="avatar" src={getAvatarUrl(team)} alt="" />
+          <Image className="avatar" src={getAvatarUrl(team)} alt="" />
           <div className="information">
             <TeamLink team={team}>
               <Button>{team.name}</Button>

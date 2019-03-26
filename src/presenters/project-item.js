@@ -7,6 +7,7 @@ import ProjectOptionsPop from './pop-overs/project-options-pop';
 import UsersList from './users-list';
 import Note from './note';
 import WrappingLink from './includes/wrapping-link';
+import Image from '../components/image/image';
 
 const ProjectItem = ({ project, collection, ...props }) => (
   <li>
@@ -21,7 +22,7 @@ const ProjectItem = ({ project, collection, ...props }) => (
     <WrappingLink href={getLink(project)} className="button-area">
       <div className={['project', project.private ? 'private-project' : ''].join(' ')} data-track="project" data-track-label={project.domain}>
         <div className="project-container">
-          <img className="avatar" src={getAvatarUrl(project.id)} alt="" />
+          <Image className="avatar" src={getAvatarUrl(project.id)} alt="" />
           <ProjectLink project={project} className="button">
             <span className="project-badge private-project-badge" aria-label="private" />
             <div className="project-name">{project.domain}</div>

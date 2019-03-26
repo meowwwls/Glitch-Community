@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Link } from './includes/link';
 import Text from '../components/text/text';
+import Image from '../components/image/image';
 
 const FooterLine = ({ href, track, children }) => (
   <Text>
@@ -54,7 +55,7 @@ export default function Footer() {
       </FooterLine>
       <hr />
       <FooterLine href="/teams" track="platforms">
-        <img className="for-platforms-icon" src={srcForPlatforms} alt="" />
+        <Image className="for-platforms-icon" src={srcForPlatforms} alt="" />
         <span className="for-platforms-text">Glitch Teams</span>
       </FooterLine>
     </footer>

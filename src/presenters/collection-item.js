@@ -11,6 +11,7 @@ import CollectionAvatar from './includes/collection-avatar';
 import { TeamAvatar, UserAvatar } from './includes/avatar';
 import { getAvatarUrl } from '../models/project';
 import { isDarkColor } from '../models/collection';
+import Image from '../components/image/image';
 
 const ProjectsPreview = ({ collection, projects, isAuthorized }) => {
   const emptyState = isAuthorized ? (
@@ -31,7 +32,7 @@ const ProjectsPreview = ({ collection, projects, isAuthorized }) => {
           {projects.slice(0, 3).map((project) => (
             <li key={project.id} className={`project-container ${project.private ? 'private' : ''}`}>
               <ProjectLink project={project} className="project-link">
-                <img className="avatar" src={getAvatarUrl(project.id)} alt="" />
+                <Image className="avatar" src={getAvatarUrl(project.id)} alt="" />
                 <div className="project-name">{project.domain}</div>
                 <div className="project-badge private-project-badge" aria-label="private" />
               </ProjectLink>
