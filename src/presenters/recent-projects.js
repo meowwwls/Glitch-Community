@@ -74,7 +74,6 @@ RecentProjectsContainer.propTypes = {
   clearUser: PropTypes.func.isRequired,
 };
 
-
 const RecentProjects = () => {
   const { currentUser: user, fetched, clear } = useCurrentUser();
   return (
@@ -87,6 +86,5 @@ const RecentProjects = () => {
     </RecentProjectsContainer>
   );
 };
-
 
 export default RecentProjects;
